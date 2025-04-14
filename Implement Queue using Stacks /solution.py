@@ -15,3 +15,9 @@ class MyQueue(object):
     def __init__(self):
         self.stack_in = Stack()
         self.stack_out = Stack()
+    def push(self, x):
+        """
+        :type x: int
+        :rtype: None
+        """
+        self.stack_in.push(x)
