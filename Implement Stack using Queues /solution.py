@@ -46,3 +46,13 @@ class MyStack:
         :rtype: int
         """
         return self.q1.popleft()
+    def top(self):
+        """
+        :rtype: int
+        """
+        return self.q1[0]
+    def empty(self):
+        """
+        :rtype: bool
+        """
+        return not self.q1
