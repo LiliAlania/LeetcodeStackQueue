@@ -21,3 +21,13 @@ class MyQueue(object):
         :rtype: None
         """
         self.stack_in.push(x)
+    def pop(self):
+        """
+        :rtype: int
+        """
+        self._move_in_to_out()
+        return self.stack_out.pop()
+    def _move_in_to_out(self):
+        if self.stack_out.is_empty():
+            while not self.stack_in.is_empty():
+                self.stack_out.push(self.stack_in.pop())
