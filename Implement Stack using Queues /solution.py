@@ -28,3 +28,7 @@ class Deque:
             self.rear = None
         self._size -= 1
         return value
+class MyStack:
+    def __init__(self):
+        self.q1 = deque()
+        self.q2 = deque()
