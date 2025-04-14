@@ -27,6 +27,17 @@ class MyQueue(object):
         """
         self._move_in_to_out()
         return self.stack_out.pop()
+    def peek(self):
+        """
+        :rtype: int
+        """
+        self._move_in_to_out()
+        return self.stack_out.peek()
+    def empty(self):
+        """
+        :rtype: bool
+        """
+        return self.stack_in.is_empty() and self.stack_out.is_empty()
     def _move_in_to_out(self):
         if self.stack_out.is_empty():
             while not self.stack_in.is_empty():
