@@ -11,3 +11,7 @@ class Stack:
         return len(self.container) == 0
     def size(self):
         return len(self.container)
+class MyQueue(object):
+    def __init__(self):
+        self.stack_in = Stack()
+        self.stack_out = Stack()
